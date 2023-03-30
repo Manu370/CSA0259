@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void printNaturalNumbers(int n)
+{
+    if (n <= 0) {  // base case
+        return;
+    }
+    
+    // print the natural number
+    printf("%d ", n);
+    
+    // call the function recursively with n-1
+    printNaturalNumbers(n-1);
+}
+
+int main()
+{
+    int n;
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
+    
+    printf("Natural numbers from 1 to %d are: ", n);
+    printNaturalNumbers(n);
+    
+    return 0;
+}
